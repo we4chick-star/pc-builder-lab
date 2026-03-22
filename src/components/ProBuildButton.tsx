@@ -54,7 +54,7 @@ function ProBuildModal({ onClose }: { onClose: () => void }) {
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-zinc-300">
               Need a custom build or expert advice?{" "}
-              <span className="font-semibold text-white">DM me on Telegram</span> — I'll help you
+              <span className="font-semibold text-white">DM me on Telegram</span> — I&apos;ll help you
               pick the perfect parts for your budget.
             </p>
           </div>

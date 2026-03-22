@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lab-bg: #020617;
+  --chemical: #10b981;
+  --lab-grid: rgba(16, 185, 129, 0.06);
+  --lab-grid-major: rgba(16, 185, 129, 0.11);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen text-zinc-200 antialiased;
+  background-color: #020617;
+  background-image:
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(16, 185, 129, 0.09), transparent 55%),
+    radial-gradient(ellipse 40% 30% at 95% 35%, rgba(16, 185, 129, 0.04), transparent 50%);
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--lab-grid-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--lab-grid-major) 1px, transparent 1px),
+    linear-gradient(var(--lab-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--lab-grid) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  opacity: 0.7;
+  z-index: 0;
+}
